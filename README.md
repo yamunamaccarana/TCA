@@ -3,7 +3,7 @@ TCA
 
 
 
-This is the repository for the [Task Component Architecture](https://github.com/yamunamaccarana/TCA/wiki).
+This is the repository for the [Task Component Architecture](https://github.com/yamunamaccarana/TCA/wiki/TCA).
 
 
 
