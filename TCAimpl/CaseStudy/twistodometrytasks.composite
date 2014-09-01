@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<composite xmlns="http://www.osoa.org/xmlns/sca/1.0"
+	targetNamespace="http://twistodometry" 
+	name="twistodometrytasks">
+
+	<component name="NavigatorComponent">
+		<implementation.java class="twistodometry.Navigator" />
+		<property name="ID">Navigator</property>
+		<property name="period">4000</property>
+		<property name="delay">0</property>
+		<property name="runOnStartup">true</property>
+		<property name="mayInterruptIfRunning">true</property>
+		<property name="useJMS">true</property>
+		<property name="url">localhost:61616</property>
+		<property name="topicRename">ODOMETRY,odometry::TWIST,twist</property>
+		<service name="TaskInterface">
+			<interface.java interface="unibg.robotics.tca.TaskInterface" />
+		</service>
+	</component>
+	
+	<component name="RobotDriverComponent">
+		<implementation.java class="twistodometry.RobotDriver" />
+		<property name="ID">Robot Driver</property>
+		<property name="period">2000</property>
+		<property name="delay">1000</property>
+		<property name="runOnStartup">true</property>
+		<property name="mayInterruptIfRunning">true</property>
+		<property name="useJMS">true</property>
+		<property name="url">localhost:61616</property>
+		<property name="topicRename">ODOMETRY,odometry::TWIST,twist</property>
+		<service name="TaskInterface">
+			<interface.java interface="unibg.robotics.tca.TaskInterface" />
+		</service>
+	</component>
+</composite>
