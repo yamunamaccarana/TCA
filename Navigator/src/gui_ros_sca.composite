@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<composite xmlns="http://www.osoa.org/xmlns/sca/1.0"
+	xmlns:t="http://tuscany.apache.org/xmlns/sca/1.0"
+	xmlns:s="test" 
+	xmlns:xsd="http://www.w3.org/2001/XMLSchema"
+	targetNamespace="testNS" 
+	name="test" autowire="false">
+	
+<!-- TCA -->
+	<component name="NavigatorComponent">
+		<implementation.java class="tca.Navigator" />
+		<property name="ID">Navigator</property>
+		<property name="period">4000</property>
+		<property name="delay">0</property>
+		<property name="runOnStartup">true</property>
+		<property name="mayInterruptIfRunning">true</property>
+		<property name="useJMS">true</property>
+		<property name="url">localhost:61616</property>
+		<property name="topicRename">ODOMETRY,odometry::TWIST,twist</property>
+		<service name="TaskInterface">
+			<interface.java interface="unibg.robotics.tca.TaskInterface" />
+		</service>
+	</component>
+	
+	<component name="RobotDriverComponent">
+		<implementation.java class="tca.RobotDriver" />
+		<property name="ID">Robot Driver</property>
+		<property name="period">2000</property>
+		<property name="delay">1000</property>
+		<property name="runOnStartup">true</property>
+		<property name="mayInterruptIfRunning">true</property>
+		<property name="useJMS">true</property>
+		<property name="url">localhost:61616</property>
+		<property name="topicRename">ODOMETRY,odometry::TWIST,twist</property>
+
+		<!--  ROS related Properties -->	
+		<property name="RosMasterURI" type="xsd:string">http://localhost:11311</property>
+		<property name="CommandTopicName" type="xsd:string">bart_command_input</property>
+		<property name="StateTopicName" type="xsd:string">bart_state_output</property>
+		<property name="TwistTopicName" type="xsd:string">bart_twist_input</property>
+		<property name="OdometryTopicName" type="xsd:string">bart_odometry_output</property>
+		
+		<service name="TaskInterface">
+			<interface.java interface="unibg.robotics.tca.TaskInterface" />
+		</service>
+	</component>
+</composite>
