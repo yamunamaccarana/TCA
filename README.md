@@ -19,7 +19,7 @@ Morover, we present an integration of TCA with [ROS](http://wiki.ros.org/) to ma
 
 **Project members**
 
-This project has been developed in the Department of Engineering of the [University of Bergamo](http://www.unibg.it/struttura/struttura.asp?cerca=ingegneria_intro).
+This project has been developed in the Department of Engineering of the [University of Bergamo](http://www.unibg.it/struttura/en_struttura.asp?cerca=en_dingind_intro).
 
 Members:
 
