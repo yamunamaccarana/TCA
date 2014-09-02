@@ -17,7 +17,11 @@ Morover, we present an integration of TCA with [ROS](http://wiki.ros.org/) to ma
 
 • [Navigator](https://github.com/yamunamaccarana/TCA/tree/master/Navigator) contains a working example of a Navigator using the TCA-ROS architecture.
 
-**Members**
+**Project members**
+
+This project has been developed in the Department of Engineering of the [University of Bergamo](http://www.unibg.it/struttura/struttura.asp?cerca=ingegneria_intro).
+
+Members:
 
 Davide Brugali, supervisor.
 
