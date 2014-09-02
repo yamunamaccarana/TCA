@@ -16,3 +16,21 @@ Morover, we present an integration of TCA with [ROS](http://wiki.ros.org/) to ma
 • [ROSimpl](https://github.com/yamunamaccarana/TCA/tree/master/ROSimpl) contains the implementation of the ROSProxy, needed to integrate TCA with ROS;
 
 • [Navigator](https://github.com/yamunamaccarana/TCA/tree/master/Navigator) contains a working example of a Navigator using the TCA-ROS architecture.
+
+**Members**
+
+Davide Brugali, supervisor.
+
+[Andrea Fernandes da Fonseca](https://github.com/andreafdaf), developer.
+
+[Andrea Luzzana](https://github.com/andrealuzzana), developer.
+
+[Yamuna Maccarana](https://github.com/yamunamaccarana), developer.
+
+**See also**
+
+D.Brugali, A.Fernandes da Fonseca, A.Luzzana, Y.Maccarana:
+
+[Developing Service Oriented Robot Control System](http://ieeexplore.ieee.org/xpl/login.jsp?tp=&arnumber=6830911&url=http%3A%2F%2Fieeexplore.ieee.org%2Fxpls%2Fabs_all.jsp%3Farnumber%3D6830911),
+
+_Service Oriented System Engineering (SOSE), 2014 IEEE 8th International Symposium_
